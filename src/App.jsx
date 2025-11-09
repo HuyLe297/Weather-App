@@ -89,22 +89,7 @@ function App() {
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-6">
           <div className="relative w-full max-w-lg">
             
-            {/* HEADER */}
-            <div className="flex justify-between items-center mb-6">
-              <button
-                onClick={() => setShowChart(false)}
-                className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <h2 className="text-2xl font-bold text-blue-400">Weather Analytics</h2>
-              <button
-                onClick={() => setShowChart(false)}
-                className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition"
-              >
-                <X size={20} />
-              </button>
-            </div>
+           
 
             {/* CHARTVIEW – TRUYỀN THÊM FORECAST */}
             <ChartView weather={weather} forecast={forecast} />
