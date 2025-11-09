@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Search } from "lucide-react"; // icon gọn nhẹ, hiện đại
+import { Search } from "lucide-react"; 
 
 const SearchBar = ({ fetchWeather }) => {
   const [city, setCity] = useState("");
