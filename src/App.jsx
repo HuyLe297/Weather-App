@@ -14,7 +14,7 @@ function App() {
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
-  const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"; // ← MỚI: API dự báo
+  const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast";
 
   const fetchWeather = async (city) => {
     setLoading(true);
@@ -36,7 +36,7 @@ function App() {
         setError("Something went wrong. Please try later.");
       }
       setWeather(null);
-      setForecast(null); // ← MỚI: Reset forecast nếu lỗi
+      setForecast(null);
     } finally {
       setLoading(false);
     }
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white px-6 py-10 relative">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-slate-900 via-gray-900 to-slate-800 text-white px-6 py-10 relative">
         
         {/* CARD CHÍNH */}
         <div className="relative w-full max-w-lg bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-white/20">
@@ -71,7 +71,7 @@ function App() {
 
           {weather && <WeatherCard weather={weather} />}
 
-          {/* NÚT MŨI TÊN PHẢI */}
+         
           {weather && !showChart && (
             <button
               onClick={() => setShowChart(true)}
@@ -94,7 +94,7 @@ function App() {
             {/* CHARTVIEW – TRUYỀN THÊM FORECAST */}
             <ChartView weather={weather} forecast={forecast} />
 
-            {/* NÚT MŨI TÊN TRÁI */}
+          
             <button
               onClick={() => setShowChart(false)}
               className="absolute -left-16 top-1/2 -translate-y-1/2 p-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg transition transform hover:scale-110"
