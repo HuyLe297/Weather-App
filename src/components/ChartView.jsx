@@ -109,7 +109,7 @@ const ChartView = ({ weather, forecast }) => {
         </div>
 
         {/* GỢI Ý */}
-        <div className="p-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl text-center text-sm border border-white/20">
+        <div className="p-4 bg-linear-to-r from-blue-600/20 to-purple-600/20 rounded-xl text-center text-sm border border-white/20">
           {temp > 30 ? (
             <p className="flex items-center justify-center gap-2">
               <Sun className="text-yellow-400" size={16} /> Nóng! Uống nhiều nước!
